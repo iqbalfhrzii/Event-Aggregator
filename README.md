@@ -1,6 +1,6 @@
-# ⚡ Event Aggregator — FastAPI, SQLite, & Docker
+# Event Aggregator — FastAPI, SQLite, & Docker
 
-## 🧭 Deskripsi Proyek
+## Deskripsi Proyek
 
 Aplikasi ini merupakan layanan **Event Aggregator** berbasis **FastAPI** yang menerima kumpulan (_batch_) event melalui REST API.  
 Setiap event disimpan ke database **SQLite**, dan sistem secara otomatis **mendeteksi serta menolak event duplikat** menggunakan kombinasi **`topic + event_id`** sebagai kunci utama.
@@ -16,7 +16,7 @@ Event yang sudah disimpan bersifat **persisten**, artinya data tidak hilang mesk
 
 ---
 
-## ⚙️ Langkah Instalasi & Menjalankan Aplikasi
+## Langkah Instalasi & Menjalankan Aplikasi
 
 | Tahap | Perintah                                                                  | Penjelasan                                                 |
 | :---- | :------------------------------------------------------------------------ | :--------------------------------------------------------- |
@@ -26,11 +26,11 @@ Event yang sudah disimpan bersifat **persisten**, artinya data tidak hilang mesk
 | 4     | _(Opsional)_ `docker-compose up --build`                                  | Menjalankan layanan secara otomatis dengan Docker Compose  |
 
 Setelah container berjalan, aplikasi dapat diakses melalui:  
-🌍 **http://localhost:8080**
+**http://localhost:8080**
 
 ---
 
-## 📡 Daftar Endpoint API
+## Daftar Endpoint API
 
 | Method | Endpoint   | Fungsi                                                | Contoh Respons                                                     |
 | :----- | :--------- | :---------------------------------------------------- | :----------------------------------------------------------------- |
@@ -41,7 +41,7 @@ Setelah container berjalan, aplikasi dapat diakses melalui:
 
 ---
 
-## 🧠 Arsitektur & Asumsi Sistem
+## Arsitektur & Asumsi Sistem
 
 | No  | Komponen / Asumsi               | Penjelasan                                                               |
 | :-- | :------------------------------ | :----------------------------------------------------------------------- |
@@ -54,7 +54,7 @@ Setelah container berjalan, aplikasi dapat diakses melalui:
 
 ---
 
-## 🧪 Pengujian Sistem
+## Pengujian Sistem
 
 Proyek ini dilengkapi dengan **unit test** menggunakan framework `pytest` untuk memastikan fungsionalitas berjalan dengan benar dan stabil.
 
