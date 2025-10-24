@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  aggregator:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./events.db:/app/events.db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/stats"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  publisher:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python -m pytest tests/test_api.py -v
+    depends_on:
+      aggregator:
+        condition: service_healthy
